@@ -4,25 +4,25 @@ const Projects = () => {
     const projectsArr = [
         {
             id: 1,
-            image: "/keeper.jpg",
+            image: "images/keeper.jpg",
             name: "Keeper App",
             desc: "Keep your notes and remove them accordingly"
         },
         {
             id: 2,
-            image: "/todoSS.jpg",
+            image: "images/todoSS.jpg",
             name: "Todo App",
             desc: "A todo app to set todos, create new todo types and remove them on completion"
         },
         {
             id: 3,
-            image: "/blog.jpg",
+            image: "images/blog.jpg",
             name: "Blog App",
             desc: "Write blogs, compose new posts"
         },
         {
             id: 4,
-            image: "/emoji.jpg",
+            image: "images/emoji.jpg",
             name: "Emojis App",
             desc:"Add emojis of your choice with their actual meanings"
         }
