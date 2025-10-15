@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif;
 }
 
 html {
@@ -23,18 +23,6 @@ html {
     align-items: center;
     padding: 20px;
     /* margin-bottom: 30px; */
-}
-
-@media(max-width: 600px) {
-    .header {
-        background-color: #4E56C0;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-
-        padding: 20px;
-        /* margin-bottom: 30px; */
-    }
 }
 
 .logo {
@@ -72,18 +60,6 @@ html {
     align-items: center;
     justify-content: space-around;
     align-items: center;
-}
-
-@media(max-width: 600px) {
-    .hero {
-        padding: 30px;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-items: center;
-    }
 }
 
 .hero img {
@@ -131,16 +107,6 @@ html {
     width: 70%;
 }
 
-@media(max-width: 600px){
-    .about p {
-    line-height: 1.5;
-    font-size: 1.5rem;
-    text-align: center;
-    display: block;
-    width: 90%;
-}
-}
-
 .resume {
     display: inline-block;
     transition: all 0.2s linear;
@@ -173,28 +139,6 @@ html {
     gap: 20px;
 }
 
-
-
-@media(max-width: 1300px) {
-    .cardContainer {
-        padding: 20px;
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: space-evenly;
-        gap: 20px;
-    }
-}
-
-@media(max-width: 950px) {
-    .cardContainer {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-}
-
 .card {
     width: 400px;
     min-height: 500px;
@@ -225,6 +169,7 @@ html {
     height: 350px;
     margin-bottom: 20px;
     box-shadow: 2px 2px 10px 1px gray;
+    border-radius: 10px;
 }
 
 .card h2 {
@@ -264,32 +209,6 @@ html {
     gap: 200px;
 }
 
-
-@media(max-width: 1200px) {
-    .form-row {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-    }
-
-    .feedback #message {
-        width: 200px;
-        height: 100px;
-        font-size: 1.2rem;
-        border: none;
-    }
-
-    .contact {
-        height: 600px;
-        padding: 50px;
-        background-color: #FDCFFA;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5rem;
-    }
-}
-
 .form-group input {
     width: 400px;
     padding: 10px;
@@ -312,23 +231,7 @@ html {
     border: none;
 }
 
-@media(max-width: 650px) {
-    .feedback #message {
-        width: 400px;
-        height: 100px;
-        font-size: 1.2rem;
-        border: none;
-    }
-
-    .form-items {
-        display: flex;
-        flex-direction: column;
-        row-gap: 30px;
-        align-items: center;
-    }
-}
-
-/* footer-setcion */
+/* footer-section */
 .footer {
     background-color: #4E56C0;
     display: flex;
@@ -341,4 +244,212 @@ html {
 
 .footer-text p {
     font-size: 1.2rem;
+}
+
+/* media queries */
+
+/* larger screens */
+@media (max-width: 1320px) {
+    .cardContainer {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+}
+
+/* medium size screens */
+@media(max-width: 1200px) {
+    .form-row {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .feedback #message {
+        width: 400px;
+        height: 100px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .contact {
+        height: 600px;
+        padding: 50px;
+        background-color: #FDCFFA;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    .card {
+        width: 330px;
+        min-height: 500px;
+        padding: 30px;
+        background-color: rgb(218, 203, 203);
+        font-size: 1.2rem;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px gray;
+        transition: all 0.2s linear;
+    }
+
+    .card img {
+        width: 270px;
+        height: 350px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px 1px gray;
+        border-radius: 10px;
+    }
+}
+
+/* for phones */
+@media(max-width: 760px) {
+    .cardContainer {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    .header {
+        background-color: #4E56C0;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px;
+        /* margin-bottom: 30px; */
+    }
+
+    .hero {
+        padding: 30px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+    }
+
+    .hero img {
+        height: 350px;
+    }
+
+    .about p {
+        line-height: 1.5;
+        font-size: 1.5rem;
+        text-align: center;
+        display: block;
+        width: 90%;
+    }
+
+    .card {
+        width: 350px;
+        min-height: 500px;
+        padding: 30px;
+        background-color: rgb(218, 203, 203);
+        font-size: 1.2rem;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px gray;
+        transition: all 0.2s linear;
+    }
+
+    .card img {
+        width: 280px;
+        height: 350px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px 1px gray;
+        border-radius: 10px;
+    }
+
+    .form-items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    .form-row input {
+        width: 300px;
+    }
+
+    #reason {
+        padding: 10px;
+        width: 300px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .feedback #message {
+        width: 300px;
+        height: 100px;
+        font-size: 1.2rem;
+        border: none;
+    }
+}
+
+@media(max-width: 410px) {
+    .header {
+        height: 100px;
+    }
+
+    .logo a {
+        font-size: 30px;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .form-row input {
+        width: 250px;
+    }
+
+    #reason {
+        padding: 10px;
+        width: 250px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .feedback #message {
+        width: 250px;
+        height: 100px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .card {
+        width: 300px;
+        min-height: 500px;
+        padding: 30px;
+        background-color: rgb(218, 203, 203);
+        font-size: 1.2rem;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px gray;
+        transition: all 0.2s linear;
+    }
+
+    .card img {
+        width: 250px;
+        height: 350px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px 1px gray;
+        border-radius: 10px;
+    }
 }
