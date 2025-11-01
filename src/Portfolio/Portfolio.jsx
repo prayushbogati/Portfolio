@@ -9,7 +9,7 @@ import "./PortfolioStyle.css";
 
 const Portfolio = () => {
     return (
-        <div>
+        <div id="portfolioBody">
             <Header />
             <Hero />
             <About />
