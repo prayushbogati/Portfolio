@@ -35,7 +35,7 @@ const Projects = () => {
             <div className="cardContainer">
                 {
                     projectsArr.map((item) => (
-                        <div className="card">
+                        <div className="card" key={item.id}>
                             <img src={item.image} alt="" />
                             <h2>{item.name}</h2>
                             <p>{item.desc}</p>
