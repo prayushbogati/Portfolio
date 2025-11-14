@@ -6,6 +6,7 @@
 }
 
 html {
+    color: rgb(41, 39, 39);
     scroll-behavior: smooth;
 }
 
@@ -16,7 +17,7 @@ html {
     z-index: 999;
     /* position: sticky; */
     top: 0;
-    background-color: #4E56C0;
+    background-color: #C9B59C;
     height: 120px;
     display: flex;
     justify-content: space-between;
@@ -33,14 +34,15 @@ html {
 .logo a {
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: rgb(54, 51, 51);
     text-transform: uppercase;
     font-size: 2.5rem;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: rgb(41, 39, 39);
+    font-weight: bold;
     display: inline-block;
     padding: 10px;
     font-size: 1.5rem;
@@ -53,7 +55,7 @@ html {
 
 /* hero-section */
 .hero {
-    background-color: #9B5DE0;
+    background-color: #D9CFC7;
     padding: 30px;
     height: 500px;
     display: flex;
@@ -86,7 +88,7 @@ html {
 
 /* about-section */
 .about {
-    background-color: #D78FEE;
+    background-color: #EFE9E3;
     min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -119,7 +121,7 @@ html {
 
 /* projects-section */
 .projects {
-    background-color: #9B5DE0;
+    background-color: #F9F8F6;
     justify-content: center;
     text-align: center;
     padding: 50px;
@@ -129,7 +131,7 @@ html {
     display: block;
     padding: 20px;
     font-size: 2.5rem;
-    color: white;
+    /* color: white; */
 }
 
 .cardContainer {
@@ -144,10 +146,10 @@ html {
     width: 400px;
     min-height: 500px;
     padding: 30px;
-    background-color: rgb(218, 203, 203);
+    background-color: #EFE9E3;
     font-size: 1.2rem;
     border-radius: 20px;
-    box-shadow: 2px 2px 10px gray;
+    box-shadow: 2px 2px 10px rgb(184, 181, 181);
     transition: all 0.2s linear;
 }
 
@@ -169,7 +171,7 @@ html {
     width: 300px;
     height: 350px;
     margin-bottom: 20px;
-    box-shadow: 2px 2px 10px 1px gray;
+    box-shadow: 2px 2px 10px 1px rgb(187, 184, 184);
     border-radius: 10px;
 }
 
@@ -181,7 +183,7 @@ html {
 .contact {
     height: 550px;
     padding: 50px;
-    background-color: #FDCFFA;
+    background-color: #EFE9E3;
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
@@ -234,13 +236,13 @@ html {
 
 /* footer-section */
 .footer {
-    background-color: #4E56C0;
+    background-color: #C9B59C;
     display: flex;
     height: 80px;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    color: white;
+    /* color: white; */
 }
 
 .footer-text p {
