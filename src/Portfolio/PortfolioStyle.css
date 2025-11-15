@@ -187,6 +187,7 @@ html {
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
+    align-items: center;
 }
 
 .form-items {
@@ -195,10 +196,10 @@ html {
     row-gap: 30px;
 }
 
-.form-items {
+/* .form-items {
     margin-left: 10%;
     margin-top: 20px;
-}
+} */
 
 .contact>h2 {
     text-align: center;
@@ -285,7 +286,11 @@ html {
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
+        align-items: center;
+        margin: auto;
     }
+
+
 }
 
 @media (max-width: 960px) {
@@ -318,11 +323,15 @@ html {
         align-items: center;
         gap: 20px;
     }
+
+    .card {
+        width: 350px;
+    }
 }
 
 @media (max-width: 580px) {
     .header {
-        background-color: #4E56C0;
+        background-color: #C9B59C;
         height: 150px;
         display: flex;
         flex-direction: column;
@@ -351,6 +360,7 @@ html {
         text-align: center;
         display: block;
         width: 90%;
+        text-align: justify;
     }
 
     .card {
