@@ -10,9 +10,9 @@ const Footer = () => {
                 <p>Made by Prayush</p>
             </div>
             <div className="footer-logos">
-                <a href="https://www.linkedin.com/in/prayush-bogati-45a440323/" target='_blank'><LinkedInIcon fontSize='large' color='primary' /></a>
-                <a href="https://github.com/prayushbogati" target='_blank'><GitHubIcon fontSize='large' color='primary' /></a>
-                <a href="mailto:prayushbogati0120@gmail.com" target='_blank'><EmailIcon fontSize='large' color='primary' /></a>
+                <a href="https://www.linkedin.com/in/prayush-bogati-45a440323/" target='_blank'><LinkedInIcon fontSize='large' color='action' /></a>
+                <a href="https://github.com/prayushbogati" target='_blank'><GitHubIcon fontSize='large' color='action' /></a>
+                <a href="mailto:prayushbogati0120@gmail.com" target='_blank'><EmailIcon fontSize='large' color='action' /></a>
             </div>
         </div>
     )
