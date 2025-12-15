@@ -1,0 +1,14 @@
+/* footer-section */
+.footer {
+    background-color: #C9B59C;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* color: white; */
+}
+
+.footer-text p {
+    font-size: 1.2rem;
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "../css/header.css"
 
 const Header = () => {
 
@@ -28,7 +29,7 @@ const Header = () => {
             position: scrollY ? 'static' : 'sticky', opacity: scrollY ? 0 : 1
         }}>
             <div className="logo">
-                <a href="#portfolioBody">Prayush Bogati</a>
+                <a href='#portfolioBody'>Prayush Bogati</a>
             </div>
             <div className="navbar">
                 <a href="#projects">Projects</a>

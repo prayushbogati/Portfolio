@@ -1,0 +1,47 @@
+.about {
+    background-color: #EFE9E3;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about p {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    width: 70%;
+}
+
+.resume {
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+
+.resume:hover {
+    transform: scale(1.05);
+}
+
+
+/* for phones */
+
+@media (max-width: 580px) {
+
+    .about p {
+        line-height: 1.5;
+        font-size: 1.5rem;
+        text-align: center;
+        display: block;
+        width: 90%;
+        text-align: justify;
+        word-break: break-all;
+    }
+}
