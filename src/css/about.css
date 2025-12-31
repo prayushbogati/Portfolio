@@ -22,6 +22,11 @@
 }
 
 .resume {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    width: 70%;
     display: inline-block;
     transition: all 0.2s linear;
 }
