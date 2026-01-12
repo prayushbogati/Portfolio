@@ -11,21 +11,27 @@ const Projects = () => {
         },
         {
             id: 2,
+            image: "images/passMan.jpg",
+            name: "Password Manager App",
+            desc: "Save passwords and with edit and delete functionality"
+        },
+        {
+            id: 3,
             image: "images/todoSS.jpg",
             name: "Todo App",
             desc: "A todo app to set todos, create new todo types and remove them on completion"
         },
         {
-            id: 3,
+            id: 4,
             image: "images/blog.jpg",
             name: "Blog App",
             desc: "Write blogs, compose new posts"
         },
         {
-            id: 4,
+            id: 5,
             image: "images/emoji.jpg",
             name: "Emojis App",
-            desc:"Add emojis of your choice with their actual meanings"
+            desc: "Add emojis of your choice with their actual meanings"
         }
     ];
 
