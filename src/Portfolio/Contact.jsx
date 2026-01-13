@@ -12,18 +12,18 @@ const Contact = () => {
                     <div className="form-row">
                         <div className="form-group">
                             <label htmlFor="name">Name</label><br />
-                            <input type="text" id='name' />
+                            <input type="text" id='name' style={{border:"1px solid gray", borderRadius:"5px"}}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label><br />
-                            <input type="email" id='email' />
+                            <input type="email" id='email' style={{border:"1px solid gray", borderRadius:"5px"}}/>
                         </div>
                     </div>
 
                     {/* dropdown */}
                     <div className="reason">
                         <label htmlFor="reason">Contact for</label><br />
-                        <select id="reason">
+                        <select id="reason" style={{border:"1px solid gray", borderRadius:"5px"}}>
                             <option value="work">Networking</option>
                             <option value="work">Freelance</option>
                             <option value="work">Collaboration</option>
@@ -35,7 +35,7 @@ const Contact = () => {
                     <div className="feedback">
                         {/* feedback */}
                         <label htmlFor="message">Message</label><br />
-                        <textarea name="" id="message"></textarea>
+                        <textarea name="" id="message" style={{border:"1px solid gray", borderRadius:"5px"}}></textarea>
                     </div>
                     <Button name="Send" type="Submit"/>
                 </div>

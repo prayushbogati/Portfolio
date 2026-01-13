@@ -1,6 +1,6 @@
 /* projects-section */
 .projects {
-    background-color: #F9F8F6;
+    /* background-color: #F9F8F6; */
     justify-content: center;
     text-align: center;
     padding-bottom: 20px;
@@ -24,10 +24,10 @@
     max-width: 400px;
     min-height: 500px;
     padding: 30px;
-    background-color: #EFE9E3;
+    background-color: white;
     font-size: 1.2rem;
     border-radius: 20px;
-    box-shadow: 2px 2px 10px rgb(184, 181, 181);
+    box-shadow: 1px 2px 2px rgb(196, 193, 193);
     transition: all 0.2s linear;
 }
 

@@ -3,7 +3,7 @@ import "../css/header.css"
 
 const Header = () => {
 
-    const [lastScrollY, set_lastScrollY] = useState(0);
+    const [lastScrollY, set_lastScrollY] = useState(window.scrollY);
     const [scrollY, set_scrollY] = useState(false);
 
     useEffect(() => {
@@ -25,8 +25,11 @@ const Header = () => {
     }, [lastScrollY])
 
     return (
+
         <div className="header" style={{
-            position: scrollY ? 'static' : 'sticky', opacity: scrollY ? 0 : 1
+            position: scrollY ? 'static' : 'sticky', opacity: scrollY ? 0 : 1,
+            backgroundColor: (window.scrollY != 0 && !scrollY) ? "white" : null,
+            height: (window.scrollY != 0 && !scrollY) ? "80px" : "100px"
         }}>
             <div className="logo">
                 <a href='#portfolioBody'>Prayush Bogati</a>
@@ -36,6 +39,7 @@ const Header = () => {
                 <a href="#contact">Contact</a>
             </div>
         </div>
+
     )
 }
 
