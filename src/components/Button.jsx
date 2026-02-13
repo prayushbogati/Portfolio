@@ -1,10 +1,10 @@
 import React from 'react'
-import "../css/buttonStyle.css"
+// import "../css/buttonStyle.css"
 
 const Button = ({ name, type }) => {
     return (
-        <div className="button">
-            <button type={type} className='btn'>{name}</button>
+        <div className="cursor-pointer bg-gray-200 w-fit p-1 border rounded-lg text-xl">
+            <button type={type}>{name}</button>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 {
   "homepage": "https://prayushbogati.github.io/<repo-name>",
-
   "name": "test-project",
   "private": true,
   "version": "0.0.0",
@@ -18,8 +17,11 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
+    "@tailwindcss/vite": "^4.1.18",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.13.0",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

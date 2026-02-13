@@ -1,5 +1,6 @@
 import React from 'react'
-import "../css/projects.css"
+import { useState, useEffect } from 'react';
+// import "../css/projects.css"
 
 const Projects = () => {
     const projectsArr = [
@@ -35,17 +36,22 @@ const Projects = () => {
         }
     ];
 
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
 
     return (
-        <div className="projects" id='projects'>
-            <h2>Projects</h2>
-            <div className="cardContainer">
+        <div id='projects' className={`mt-10 md:px-10 max-w-full transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <h2 className='text-4xl text-center mb-10'>Projects</h2>
+            <div className="grid grid-cols-1 place-items-center md:place-content-center px-10 md:grid-cols-2 lg:grid-cols-3">
                 {
                     projectsArr.map((item) => (
-                        <div className="card" key={item.id}>
-                            <img src={item.image} alt="" />
-                            <h2>{item.name}</h2>
-                            <p>{item.desc}</p>
+                        <div className="max-w-100 min-h-80 px-10" key={item.id}>
+                            <img src={item.image} alt="" className='size-80 rounded-lg' />
+                            <h2 className='text-center text-2xl my-3 underline'>{item.name}</h2>
+                            <p className='text-center text-2xl min-h-30'>{item.desc}</p>
 
                         </div>
                     ))
