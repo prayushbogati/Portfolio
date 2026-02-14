@@ -48,7 +48,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 place-items-center md:place-content-center px-10 md:grid-cols-2 lg:grid-cols-3">
                 {
                     projectsArr.map((item) => (
-                        <div className="max-w-100 min-h-80 px-10" key={item.id}>
+                        <div className="max-w-100 min-h-80 px-10 transition-all duration-300 ease-in-out hover:scale-101" key={item.id}>
                             <img src={item.image} alt="" className='size-80 rounded-lg' />
                             <h2 className='text-center text-2xl my-3 underline'>{item.name}</h2>
                             <p className='text-center text-2xl min-h-30'>{item.desc}</p>

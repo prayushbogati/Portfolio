@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Hero from './Hero';
-import Projects from './Projects';
-import Contact from './Contact';
-
-// import "../css/header.css"
+import {Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -30,7 +25,6 @@ const Header = () => {
     }, [lastScrollY])
 
     return (
-        <BrowserRouter>
             <div className={`flex flex-col text-center items-center justify-center gap-5 px-10 py-5 z-1 ${scrollY ? "static opacity-0" : "sticky opacity-100"}
     ${window.scrollY !== 0 && !scrollY ? "bg-white h-20" : "h-24"}
     top-0 transition-all duration-300 md:flex-row md:justify-between max-sm:mt-10`}>
@@ -42,13 +36,6 @@ const Header = () => {
                     <Link to="/contact" className='transition-all ease-in-out duration-300 block hover:scale-105'>Contact</Link>
                 </div>
             </div>
-
-            <Routes>
-                <Route path='/' element={<Hero />} />
-                <Route path='/projects' element={<Projects />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
-        </BrowserRouter>
     )
 }
 
