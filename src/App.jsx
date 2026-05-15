@@ -1,29 +1,45 @@
-import { useState } from 'react'
-import './css/App.css'
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from './Pages/Home';
+import Projects from './Pages/Projects';
+import Contact from './Pages/Contact';
+import { Routes, Route } from "react-router-dom";
+import DotField from './components/DotField';
+import Cursor from './components/Cursor'
 
-function App() {
-  const [input, setInput] = useState("");
-  const [text, setText] = useState("");
+const App = () => {
+    return (
+        <div className="relative min-h-screen font-firacode">
+            {/* Background */}
+            <div className="fixed inset-0 -z-10">
+                <DotField
+                    dotRadius={1.5}
+                    dotSpacing={26}
+                    bulgeStrength={67}
+                    glowRadius={50}
+                    sparkle={false}
+                    waveAmplitude={0}
+                    cursorRadius={300}
+                    cursorForce={0.17}
+                    bulgeOnly
+                    gradientFrom="#2a292d"
+                    gradientTo="#555159"
+                    glowColor="white"
+                />
+            </div>
 
-  const handleSubmit = (e) => {
-    e.preventDefault();      // prevent page refresh
-    setText(input);          // set the text state
-  };
+            {/* Content */}
+            <Header />
 
-  return (
-    <>
-      <h1>Hello</h1>
-      <div className="texts">{text}</div>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          value={input}
-          onChange={(e) => setInput(e.target.value)} 
-        />
-        <button type="submit">Submit</button>
-      </form>
-    </>
-  )
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/contact' element={<Contact />} />
+            </Routes>
+
+            <Footer />
+        </div>
+    )
 }
-
 export default App;
