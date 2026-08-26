@@ -3,7 +3,7 @@ import React from 'react'
 
 const Button = ({ name, type }) => {
     return (
-        <div className="bg-gray-200 w-fit p-1 border rounded-lg text-xl">
+        <div className="bg-gray-200 max-sm:w-full sm:w-fit px-2 py-1 border rounded-lg text-xl text-center">
             <button type={type} className='cursor-pointer'>{name}</button>
         </div>
     )

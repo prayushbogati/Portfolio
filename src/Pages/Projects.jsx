@@ -30,10 +30,10 @@ const Projects = () => {
         },
         {
             id: 5,
-            image: "images/emoji.jpg",
-            name: "Emojis App",
-            desc: "Add emojis of your choice with their actual meanings"
-        }
+            image: "images/blog1.jpg",
+            name: "VAXOCARE",
+            desc: "A Child Vaccination Management System"
+        },
     ];
 
     const [loaded, setLoaded] = useState(false)
@@ -43,16 +43,15 @@ const Projects = () => {
     }, [])
 
     return (
-        <div id='projects' className={`mt-10 md:px-10 max-w-full transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div id='projects' className={`md:px-20 max-w-full transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <h2 className='text-4xl text-center mb-10'>Projects</h2>
-            <div className="grid grid-cols-1 place-items-center md:place-content-center px-10 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 place-items-center md:place-content-center px-10 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    projectsArr.map((item) => (
-                        <div className="max-w-100 min-h-80 px-10 transition-all duration-300 ease-in-out hover:scale-101" key={item.id}>
+                    projectsArr.reverse().map((item) => (
+                        <div className="max-w-80 flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-101" key={item.id}>
                             <img src={item.image} alt="" className='size-80 rounded-lg' />
-                            <h2 className='text-center text-2xl my-3 underline'>{item.name}</h2>
-                            <p className='text-center text-2xl min-h-30'>{item.desc}</p>
-
+                            <h2 className='text-center text-2xl mt-5'>{item.name}</h2>
+                            <p className='text-center text-xl min-h-30'>{item.desc}</p>
                         </div>
                     ))
                 }

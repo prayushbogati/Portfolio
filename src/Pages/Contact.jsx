@@ -17,7 +17,7 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         toast.success('Form submitted!', {
             position: "top-right",
             autoClose: 5000,
@@ -48,42 +48,42 @@ const Contact = () => {
 
     }
     return (
-        <div id='contact' className={`flex flex-col items-center mt-10 transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div id='contact' className={`px-10 md:px-20 flex flex-col items-center justify-center transition-all duration-700 ease-out ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
 
             <ToastContainer />
 
             <h2 className='text-4xl text-center mb-10'>Contact Me</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="flex flex-col gap-5 text-2xl md:px-20">
+            <form onSubmit={handleSubmit} className='w-full max-w-xl'>
+                <div className="flex flex-col gap-5 text-xl sm:text-2xl w-full">
                     {/* name and email */}
-                    <div className="flex flex-col md:gap-20 md:flex-row">
-                        <div className="form-group">
+                    <div className="flex flex-col gap-5 lg:flex-row w-full">
+                        <div className="form-group lg:w-1/2">
                             <label htmlFor="name">Name</label><br />
-                            <input onChange={(e) => setName(e.target.value)} value={name} type="text" name='name' id='name' className='border border-gray-500 rounded-md w-80 text-xl px-2 py-1' required />
+                            <input onChange={(e) => setName(e.target.value)} value={name} type="text" name='name' id='name' className='bg-white border border-gray-500 rounded-md w-full text-xl px-2 py-1' required />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group lg:w-1/2">
                             <label htmlFor="email">Email</label><br />
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name='email' id='email' className='border border-gray-500 rounded-md w-80 text-xl px-2 py-1' required />
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name='email' id='email' className='bg-white border border-gray-500 rounded-md w-full text-xl px-2 py-1' required />
                         </div>
                     </div>
 
                     {/* dropdown */}
-                    <div className="reason">
+                    <div className="reason w-full">
                         <label htmlFor="reason">Contact for</label><br />
-                        <select onChange={(e) => setReason(e.target.value)} value={reason} id="reason" name='reason' className='text-xl border border-gray-500 rounded-md px-2 py-1 w-80'>
+                        <select onChange={(e) => setReason(e.target.value)} value={reason} id="reason" name='reason' className='text-xl bg-white border border-gray-500 rounded-md px-2 py-1 w-full'>
                             <option value="networking">Networking</option>
                             <option value="work">Freelance</option>
-                            <option value="creelance">Collaboration</option>
+                            <option value="freelance">Collaboration</option>
                             <option value="mentorship">Mentorship</option>
                             <option value="feedback">Feedback</option>
                             <option value="others">Others</option>
                         </select>
                     </div>
 
-                    <div className="feedback">
-                        {/* feedback */}
+                    {/* feedback */}
+                    <div className="feedback w-full">
                         <label htmlFor="message">Message</label><br />
-                        <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" className='border border-gray-500 rounded-md w-80 md:w-100' rows={3} cols={30}></textarea>
+                        <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" className='border bg-white border-gray-500 rounded-md w-full text-xl max-h-50' rows={4} cols={30}></textarea>
                     </div>
                     <Button name="Send" type="submit" />
                 </div>
