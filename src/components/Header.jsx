@@ -25,7 +25,7 @@ const Header = () => {
     }, [lastScrollY])
 
     return (
-        <div className={`border flex flex-col md:items-center justify-center gap-2 md:gap-5 px-10 md:px-20 py-5 mb-5 z-1 ${scrollY ? "static opacity-0" : "sticky opacity-100"}
+        <div className={`flex flex-col md:items-center justify-center gap-2 md:gap-5 px-10 md:px-20 py-5 mb-5 z-1 ${scrollY ? "static opacity-0" : "sticky opacity-100"}
     ${window.scrollY !== 0 && !scrollY ? "bg-white" : null}
     top-0 transition-all duration-300 md:flex-row md:justify-between`}>
             <div className="text-4xl">
