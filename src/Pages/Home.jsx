@@ -44,7 +44,7 @@ const Home = () => {
 
                 {/* <p>Download resume: <a className='resume' style={{ textDecoration: "none", fontStyle: "italic" }} href="https://drive.google.com/file/d/1sNjcAjQVrSYWISu-MB6WL1zloxdlYOK_/view" target='_blank'>resume</a></p> ---- for google drive link ---- */}
 
-                <a className='inline-block text-lg text-white mt-5 bg-gray-700 hover:bg-gray-800 p-2 rounded-xl ' href="/pdf/Resume.pdf" download="CVprayush.pdf">Download Resume</a>
+                <a className='inline-block text-lg text-white mt-5 bg-gray-700 transition-all duration-100 ease-in-out hover:bg-gray-800 px-3 py-2 rounded-xl ' href="/pdf/Resume.pdf" download="CVprayush.pdf">Download Resume</a>
             </div>
         </div>
     )
