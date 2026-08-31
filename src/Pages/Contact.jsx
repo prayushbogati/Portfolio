@@ -55,19 +55,19 @@ const Contact = () => {
         {
             id: 'email',
             text: 'Email me at',
-            icon: <MdEmail size={30}/>,
+            icon: <MdEmail size={30} />,
             desc: 'prayush498@gmail.com',
         },
         {
             id: 'linkedin',
             text: 'LinkedIn Profile',
-            icon: <FaLinkedin size={30}/>,
+            icon: <FaLinkedin size={30} />,
             desc: 'Prayush Bogati',
         },
         {
             id: 'github',
             text: 'GitHub',
-            icon: <FaGithub size={30}/>,
+            icon: <FaGithub size={30} />,
             desc: 'prayushbogati',
         },
     ]
@@ -87,26 +87,28 @@ const Contact = () => {
                 }
             </section>
 
+            <h2 className='text-xl font-semibold'>Or Send Me A Message:</h2>
             {/* form */}
             <section>
-                <form onSubmit={handleSubmit} className='w-full max-w-xl'>
-                    <div className="flex flex-col gap-5 text-xl sm:text-2xl w-full">
+                <form onSubmit={handleSubmit} className='w-full max-w-xl py-5'>
+                    <div className="flex flex-col text-lg gap-5">
                         {/* name and email */}
                         <div className="flex flex-col gap-5 lg:flex-row w-full">
                             <div className="form-group lg:w-1/2">
                                 <label htmlFor="name">Name</label><br />
-                                <input onChange={(e) => setName(e.target.value)} value={name} type="text" name='name' id='name' className='bg-white border border-gray-500 rounded-md w-full text-xl px-2 py-1' required />
+                                <input onChange={(e) => setName(e.target.value)} value={name} type="text" name='name' id='name' className='bg-white border border-gray-500 rounded-md w-full px-2 py-1' required />
                             </div>
                             <div className="form-group lg:w-1/2">
                                 <label htmlFor="email">Email</label><br />
-                                <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name='email' id='email' className='bg-white border border-gray-500 rounded-md w-full text-xl px-2 py-1' required />
+                                <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name='email' id='email' className='bg-white border border-gray-500 rounded-md w-full px-2 py-1' required />
                             </div>
                         </div>
 
                         {/* dropdown */}
-                        <div className="reason w-full">
-                            <label htmlFor="reason">Contact for</label><br />
-                            <select onChange={(e) => setReason(e.target.value)} value={reason} id="reason" name='reason' className='text-xl bg-white border border-gray-500 rounded-md px-2 py-1 w-full'>
+                        <div className="subject">
+                            <label htmlFor="subject">Contact for</label><br />
+                            <select onChange={(e) => setReason(e.target.value)} id="subject" name='subject' className='bg-white border border-gray-500 rounded-md px-2 py-1 w-full text-sm' required>
+                                <option value="" disabled>Choose a subject</option>
                                 <option value="networking">Networking</option>
                                 <option value="work">Freelance</option>
                                 <option value="freelance">Collaboration</option>
@@ -117,9 +119,9 @@ const Contact = () => {
                         </div>
 
                         {/* feedback */}
-                        <div className="feedback w-full">
+                        <div className="feedback">
                             <label htmlFor="message">Message</label><br />
-                            <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" className='border bg-white border-gray-500 rounded-md w-full text-xl max-h-50' rows={4} cols={30}></textarea>
+                            <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" className='border bg-white border-gray-500 rounded-md w-full text-lg max-h-50 px-2 py-1' rows={4} cols={30}></textarea>
                         </div>
                         <Button name="Send" type="submit" />
                     </div>

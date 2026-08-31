@@ -28,16 +28,18 @@ const App = () => {
             </div>
             {/* Content */}
             <Header />
+            <div className="mt-10">
 
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/projects' element={<Projects />} />
-                <Route path='/projects/:id' element={<Project />} />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/projects' element={<Projects />} />
+                    <Route path='/projects/:id' element={<Project />} />
 
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
 
-            <Footer />
+                <Footer />
+            </div>
         </div>
     )
 }
