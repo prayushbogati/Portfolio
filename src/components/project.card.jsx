@@ -1,7 +1,7 @@
 import Modal from "./modal"
 import { useState } from "react"
 
-export default function ProjectCard({ img, name, desc, tech }) {
+export default function ProjectCard({ img, name, desc, tech, link }) {
     const [showModal, setShowModal] = useState(false)
 
     return (
@@ -14,6 +14,7 @@ export default function ProjectCard({ img, name, desc, tech }) {
                     desc={desc}
                     onClose={() => setShowModal(false)}
                     tech={tech}
+                    link={link}
                 />
             )}
 

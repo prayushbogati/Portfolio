@@ -1,8 +1,10 @@
 import { createPortal } from "react-dom"
 import { useEffect, useRef } from "react"
+import { Link } from "react-router-dom";
 import gsap from 'gsap'
+import { FaGithub } from "react-icons/fa";
 
-export default function Modal({ title, img, desc, onClose, tech }) {
+export default function Modal({ title, img, desc, onClose, tech, link }) {
     const overlayRef = useRef();
     const modalRef = useRef();
 
@@ -34,8 +36,8 @@ export default function Modal({ title, img, desc, onClose, tech }) {
             { opacity: 0.5, duration: 0.2 }
         )
         gsap.fromTo(modalRef.current,
-            { opacity: 0, scale: 0.9},
-            { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out"}
+            { opacity: 0, scale: 0.9 },
+            { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" }
         )
         // re-enable scroll when modal closes
         return () => {
@@ -84,6 +86,7 @@ export default function Modal({ title, img, desc, onClose, tech }) {
                             ))
                         }
                     </ul>
+                    <a href={link} target="_blank" className="flex gap-2 items-center bg-gray-700 text-white max-w-fit rounded-md p-2 mx-auto transition-colors duration-200 ease-in-out hover:bg-gray-800"><FaGithub size={20} /><span className="text-sm">Source Code</span></a>
                 </div>
             </div>
         </>,

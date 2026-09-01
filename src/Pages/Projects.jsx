@@ -16,7 +16,7 @@ const Projects = () => {
             <div className="grid grid-cols-1 place-items-center md:place-content-center px-10 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     [...projects].reverse().map((item) => (
-                        <ProjectCard key={item.id} img={item.image} name={item.name} desc={item.desc} tech={item.tech}/>
+                        <ProjectCard key={item.id} img={item.image} name={item.name} desc={item.desc} tech={item.tech} link={item.github_link}/>
                     ))
                 }
             </div>
