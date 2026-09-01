@@ -1,14 +1,26 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import TextType from "../components/TextType"
+// import gsap from 'gsap'
 
 const Home = () => {
     const [loaded, setLoaded] = useState(false)
+    const bodyRef = useRef();
 
     useEffect(() => {
         setLoaded(true)
+        // gsap.from(bodyRef.current,
+        //     {
+        //         y: '-10%',
+        //         opacity: 1,
+        //         duration: 200,
+        //         ease: 'power2.in'
+        //     }
+        // )
     }, [])
+
+    //  ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
     return (
-        <div id='about' className={`container mx-auto flex flex-col items-center justify-center lg:flex-row transition-all duration-700 ease-out px-10 md:px-20 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div ref={bodyRef} id='about' className={`container mx-auto flex flex-col items-center justify-center lg:flex-row transition-all duration-700 ease-out px-10 md:px-20  ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {/* Hero */}
             <div className="flex flex-col items-center justify-center gap-5 lg:w-1/3 pt-5">
                 <div className='max-w-80 m-auto'>

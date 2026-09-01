@@ -1,12 +1,42 @@
 import { createPortal } from "react-dom"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
+import gsap from 'gsap'
 
 export default function Modal({ title, img, desc, onClose, tech }) {
+    const overlayRef = useRef();
+    const modalRef = useRef();
+
+    function closeModal() {
+        gsap.to(overlayRef.current,
+            {
+                opacity: 0,
+                duration: 0.25
+            }
+        )
+
+        gsap.to(modalRef.current,
+            {
+                opacity: 0,
+                scale: 0,
+                duration: 0.25,
+                ease: 'power2.in',
+                onComplete: onClose
+            }
+        )
+    }
 
     useEffect(() => {
         // disable scroll when modal opens
         document.body.style.overflow = "hidden"
 
+        gsap.fromTo(overlayRef.current,
+            { opacity: 0 },
+            { opacity: 0.5, duration: 0.2 }
+        )
+        gsap.fromTo(modalRef.current,
+            { opacity: 0, scale: 0.9},
+            { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out"}
+        )
         // re-enable scroll when modal closes
         return () => {
             document.body.style.overflow = "unset"
@@ -16,19 +46,18 @@ export default function Modal({ title, img, desc, onClose, tech }) {
     return createPortal(
         <>
             {/* Backdrop */}
-            <div
+            <div ref={overlayRef}
                 className="fixed inset-0 bg-gray-500 opacity-50 z-40"
-                onClick={onClose}
+                onClick={closeModal}
             />
 
-            {/* Modal panel */}
-            <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                            max-h-[90vh] w-3xl bg-gray-50 z-50 shadow-2xl rounded-2xl
+            {/* modal */}
+            <div ref={modalRef} className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                            max-h-[90vh] w-full max-w-3xl bg-gray-50 z-50 shadow-2xl rounded-2xl
                             flex flex-col overflow-y-auto">
 
-                {/* Close button */}
                 <button
-                    onClick={onClose}
+                    onClick={closeModal}
                     className="sticky top-4 self-end mr-4 mt-4 w-8 h-8 rounded-full bg-gray-100
                                flex items-center justify-center hover:bg-gray-200
                                transition-colors duration-200 text-gray-600 z-10 shrink-0"
